@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        domains: ['ugc.production.linktr.ee'],
+    },
+};
 
 export default nextConfig;
