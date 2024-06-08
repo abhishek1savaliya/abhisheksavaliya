@@ -34,6 +34,7 @@ export default function Home() {
                 <a
                   href="mailto:abhisheksavaliya000@outlook.com"
                   className="text-blue-500 hover:text-blue-700"
+                  target="_blank"
                 >
                   Email
                 </a>
@@ -51,6 +52,7 @@ export default function Home() {
                 <a
                   href="https://www.abhishekprofile.online/"
                   className="text-blue-500 hover:text-blue-700"
+                  target="_blank"
                 >
                   My Profile
                 </a>
@@ -68,6 +70,7 @@ export default function Home() {
                 <a
                   href="https://www.linkedin.com/in/abhisheksavaliya"
                   className="text-blue-500 hover:text-blue-700"
+                  target="_blank"
                 >
                   LinkedIn
                 </a>
@@ -84,7 +87,7 @@ export default function Home() {
               <div className="flex-grow text-center">
                 <a
                   href="https://github.com/abhishek1savaliya"
-                  className="text-blue-500 hover:text-blue-700"
+                  className="text-blue-500 hover:text-blue-700" target="_blank"
                 >
                   GitHub
                 </a>
@@ -101,7 +104,7 @@ export default function Home() {
               <div className="flex-grow text-center">
                 <a
                   href="https://twitter.com/abhisheksvaliya"
-                  className="text-blue-500 hover:text-blue-700"
+                  className="text-blue-500 hover:text-blue-700" target="_blank"
                 >
                   X (Twitter)
                 </a>
@@ -118,7 +121,7 @@ export default function Home() {
               <div className="flex-grow text-center">
                 <a
                   href="http://www.youtube.com/@SriKrsnaBhajananvita"
-                  className="text-blue-500 hover:text-blue-700"
+                  className="text-blue-500 hover:text-blue-700" target="_blank"
                 >
                   YouTube
                 </a>
@@ -135,7 +138,7 @@ export default function Home() {
               <div className="flex-grow text-center">
                 <a
                   href="https://www.instagram.com/ll__abhishek__ll__909/"
-                  className="text-blue-500 hover:text-blue-700"
+                  className="text-blue-500 hover:text-blue-700" target="_blank"
                 >
                   Instagram
                 </a>
