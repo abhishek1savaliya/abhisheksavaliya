@@ -1,10 +1,12 @@
 'use client'
 import React, { useState } from "react";
 import Image from "next/image";
+import { Analytics } from "@vercel/analytics/react"
 import Dot from './component/Dot/page'
 import Popup from './component/popup/page'
 import Qrcode from './component/Qr/page'
 import profileData from '../Data/profile.json'
+
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
@@ -19,6 +21,7 @@ export default function Home() {
   }
   return (
     <>
+      <Analytics />
       <div className="flex justify-center items-center min-h-screen bg-gray-100">
         <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
 
