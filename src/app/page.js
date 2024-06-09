@@ -6,6 +6,7 @@ import Dot from './component/Dot/page'
 import Popup from './component/popup/page'
 import Qrcode from './component/Qr/page'
 import profileData from '../Data/profile.json'
+import Head from "next/head";
 
 
 export default function Home() {
@@ -21,6 +22,9 @@ export default function Home() {
   }
   return (
     <>
+     <Head>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
       <Analytics />
       <div className="flex justify-center items-center min-h-screen bg-gray-100">
         <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
