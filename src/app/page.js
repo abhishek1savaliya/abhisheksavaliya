@@ -15,8 +15,8 @@ export default function Home() {
 
   return (
     <>
-   <div className="flex justify-center items-center min-h-screen bg-gray-100">
-  <div className="w-full max-w-md p-8 bg-gray-100 rounded-lg shadow-md">
+<div className="flex justify-center items-center min-h-screen bg-gray-100">
+  <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
 
     <div className="flex justify-center mb-4">
       <div className="w-30 h-30 bg-gray-300 rounded-full overflow-hidden flex justify-center items-center">
@@ -34,28 +34,27 @@ export default function Home() {
       <h1 className="text-xl font-bold text-center">Abhishek Savaliya</h1>
       <h2 className="text-lg text-center">Let's connect with me 😀</h2>
       <ul className="space-y-2">
-  {profileData.map((item, index) => (
-    <div
-      key={index}
-      className="text-blue-500 hover:text-blue-700"
-      style={{ padding: "1px" }}
-      onClick={() => window.open(item.targetLink, "_blank")}
-    >
-      <li className="bg-gray-100 p-4 rounded-lg shadow-md transition-transform transform hover:scale-105 flex items-center justify-between cursor-pointer hover:bg-gray-200 relative">
-        <div className="flex items-center flex-grow">
-          <div className="w-6 h-6 mr-2">
-            <img src={item.image} alt={item.alt} className="w-full h-full" />
+        {profileData.map((item, index) => (
+          <div
+            key={index}
+            className="text-blue-500 hover:text-blue-700"
+            style={{ padding: "1px" }}
+            onClick={() => window.open(item.targetLink, "_blank")}
+          >
+            <li className="bg-gray-100 p-4 rounded-lg shadow-md transition-transform transform hover:scale-105 flex items-center justify-between cursor-pointer hover:bg-gray-200 relative">
+              <div className="flex items-center flex-grow">
+                <div className="w-6 h-6 mr-2">
+                  <img src={item.image} alt={item.alt} className="w-full h-full" />
+                </div>
+                <div className="flex-grow text-center">{item.name}</div>
+              </div>
+              <button onClick={(e) => { e.stopPropagation(); togglePopup(); }}>
+                <Dot />
+              </button>
+            </li>
           </div>
-          <div className="flex-grow text-center">{item.name}</div>
-        </div>
-        <button onClick={(e) => { e.stopPropagation(); togglePopup(); }}>
-          <Dot />
-        </button>
-      </li>
-    </div>
-  ))}
-</ul>
-
+        ))}
+      </ul>
     </div>
   </div>
 </div>
