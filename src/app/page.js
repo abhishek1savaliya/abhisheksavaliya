@@ -34,7 +34,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between mb-4">
             <div>
               <h1 class="text-xl font-bold">Abhishek Savaliya</h1>
               <h2 class="text-lg">Let's connect with me 😀</h2>
