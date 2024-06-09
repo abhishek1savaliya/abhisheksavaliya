@@ -10,3 +10,8 @@
 #dots-container:hover .dot {
     background-color: #000;
 }
+
+.easyclick {
+    padding: 10px;
+    background: #000;
+}
