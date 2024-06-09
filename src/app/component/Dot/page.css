@@ -1,0 +1,12 @@
+.dot {
+    background-color: #232222;
+    height: 5px;
+    width: 5px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#dots-container:hover .dot {
+    background-color: #000;
+}
