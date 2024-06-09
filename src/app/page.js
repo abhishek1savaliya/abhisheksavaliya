@@ -26,13 +26,13 @@ export default function Home() {
         <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
 
           <div className="flex justify-center mb-4">
-            <div className="w-30 h-30 bg-gray-300 rounded-full overflow-hidden flex justify-center items-center">
+            <div className="w-36 h-36  bg-gray-300 rounded-full overflow-hidden flex justify-center items-center">
               <Image
                 src="https://ugc.production.linktr.ee/e9d47103-08be-4d91-b2fd-370f186e9b07_20230926-161226.jpeg"
                 alt="Profile"
                 className="rounded-full transform transition-transform duration-300 hover:scale-110"
-                width={100}
-                height={100}
+                width={220}
+                height={220}
               />
             </div>
           </div>
