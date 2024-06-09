@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Abhishek Savaliya",
-  description: "simply connect with abhishek",
+  description: "Simply connect with abhishek",
 };
 
 export default function RootLayout({ children }) {
