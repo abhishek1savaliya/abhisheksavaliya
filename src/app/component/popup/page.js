@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { SocialIcon } from 'react-social-icons';
 
@@ -8,7 +9,7 @@ const page = ({ togglePopup }) => {
                 <button
                     className="absolute -top-1 -right-1 text-white bg-red-500 hover:bg-red-700 rounded-full w-4 h-4 flex items-center justify-center cursor-pointer"
                     onClick={togglePopup}
-                    
+
                 >
                     <span className="pointer-events-none">&times;</span>
                 </button>
