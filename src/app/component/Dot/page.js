@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import './page.css'
 
 
-const Page = () => {
+const Page = ({css}) => {
     const [showPopup, setShowPopup] = useState(false);
 
     const togglePopup = () => {

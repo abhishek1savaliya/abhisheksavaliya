@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import './page.css';
 
-const Page = ({ toggleOr }) => {
+const Page = ({ toggleQr }) => {
     const [showLoader, setShowLoader] = useState(true);
 
     const copyLink = () => {
@@ -28,7 +28,7 @@ const Page = ({ toggleOr }) => {
     return (
         <div>
             <div className="p-4 flex justify-between items-center">
-                <button className="close-button -top-5 -right-5" onClick={toggleOr}>&times;</button>
+                <button className="close-button -top-5 -right-5" onClick={toggleQr}>&times;</button>
             </div>
 
             {showLoader ? (
