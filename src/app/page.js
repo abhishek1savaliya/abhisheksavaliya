@@ -10,27 +10,40 @@ import Qrcode from './component/Qr/page'
 import profileData from '../Data/profile.json'
 import Head from "next/head";
 
-
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const [qr, setQr] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showLoader, setShowLoader] = useState(true);
 
+  // Function to toggle popup
   const togglePopup = () => {
     setShowPopup(!showPopup);
   };
 
+  // Function to toggle QR
   const toggleQr = () => {
     console.log("Toggle QR called");
     setQr(!qr);
   };
 
+  // Toggle Dark Mode and update localStorage
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    if (newMode) {
+      localStorage.setItem('mode', 'dark'); // Save dark mode in localStorage
+    } else {
+      localStorage.removeItem('mode'); // Remove from localStorage on light mode
+    }
   };
 
   useEffect(() => {
+    const savedMode = localStorage.getItem('mode');
+    if (savedMode === 'dark') {
+      setIsDarkMode(true);
+    }
+
     const timer = setTimeout(() => {
       setShowLoader(false);
     }, 100);
