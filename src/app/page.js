@@ -44,8 +44,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Analytics />
+
       <div className={`flex justify-center items-center min-h-screen ${isDarkMode ? 'dark-mode bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}>
-        <div className={`w-full max-w-md p-8 ${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-md`}>
+        <div className={`w-full max-w-md p-8 m-3 ${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-md`}>
           <div className="flex justify-between mb-4">
             <div></div>
             <button role="button" onClick={toggleDarkMode}>
