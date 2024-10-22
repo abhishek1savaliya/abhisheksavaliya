@@ -7,10 +7,11 @@ const page = ({ togglePopup }) => {
         <div className="fixed inset-0 flex items-center justify-center z-50 ">
             <div className="bg-white rounded-lg p-4 shadow-lg relative">
                 <button
-                    className="absolute -top-1 -right-1 text-white bg-red-500 hover:bg-red-700 rounded-full w-4 h-4 flex items-center justify-center cursor-pointer"
+                    className="absolute -top-1 -right-1 text-white bg-red-500 hover:bg-red-700 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer"
                     onClick={togglePopup}
                 >
-                    <span className="pointer-events-none">&times;</span>
+                    <span className="pointer-events-none text-2xl">&times;</span>
+
                 </button>
 
                 <p className="text-base font-bold mb-2">Share profile</p>
