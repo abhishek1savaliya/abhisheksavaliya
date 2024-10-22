@@ -9,6 +9,7 @@ import Popup from './component/popup/page'
 import Qrcode from './component/Qr/page'
 import profileData from '../Data/profile.json'
 import Head from "next/head";
+import { SocialIcon } from "react-social-icons";
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
@@ -105,9 +106,22 @@ export default function Home() {
                 >
                   <li className={`p-4 rounded-lg shadow-md transition-transform transform hover:scale-105 flex items-center justify-between cursor-pointer relative ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-100 hover:bg-gray-200'}`}>
                     <div className="flex items-center flex-grow">
-                      <div className="w-6 h-6 mr-2">
-                        <img src={item.image} alt={item.alt} className="w-full h-full" />
+
+                      <div className='mr-2 h-13'>
+
+                        {item.network === "profile" ? (
+                          <img
+                            src={item.image}
+                            alt={item.alt}
+                            style={{ height: 50, width: 50, borderRadius: '50%' }}
+                          />
+
+                        ) : (
+                          <SocialIcon network={item.network} style={{ height: 50, width: 50 }} />
+                        )}
                       </div>
+
+
                       <div className={`flex-grow text-center ${isDarkMode ? 'text-white font-bold' : 'text-black font-bold'}`}>{item.name}</div>
                     </div>
                     <button onClick={(e) => { e.stopPropagation(); togglePopup(); }}>
