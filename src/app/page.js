@@ -69,7 +69,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center mb-4">
-            <div className="w-36 h-36 bg-gray-300 rounded-full overflow-hidden flex justify-center items-center">
+            <div className="w-36 h-36 bg-gray-300 rounded-full border-4 border-gray-100 overflow-hidden flex justify-center items-center">
 
               {showLoader ? (
                 <div className="flex justify-center items-center w-160 h-48 p-10">
@@ -119,6 +119,7 @@ export default function Home() {
                         ) : (
                           <SocialIcon network={item.network} style={{ height: 50, width: 50 }} />
                         )}
+                        
                       </div>
 
 
