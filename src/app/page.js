@@ -17,6 +17,8 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showLoader, setShowLoader] = useState(true);
 
+  const imageShow = ['profile', 'paypal']
+
   // Function to toggle popup
   const togglePopup = () => {
     setShowPopup(!showPopup);
@@ -109,7 +111,7 @@ export default function Home() {
 
                       <div className='mr-2 h-13'>
 
-                        {item.network === "profile" ? (
+                        {imageShow.includes(item.network) ? (
                           <img
                             src={item.image}
                             alt={item.alt}
@@ -119,7 +121,7 @@ export default function Home() {
                         ) : (
                           <SocialIcon network={item.network} style={{ height: 50, width: 50 }} />
                         )}
-                        
+
                       </div>
 
 

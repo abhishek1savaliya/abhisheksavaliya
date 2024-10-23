@@ -14,6 +14,13 @@
     "targetLink": "mailto:abhishekgetintouch@outlook.com"
   },
   {
+    "name": "Paypal",
+    "network": "paypal",
+    "image": "https://i.ibb.co/JRJRbYx/paypal-3384015-1920.png",
+    "alt": "Twitch Logo",
+    "targetLink": "https://www.paypal.com/paypalme/AbhishekGSavaliya"
+  },
+  {
     "name": "LinkedIn",
     "network": "linkedin",
     "image": "https://ugc.production.linktr.ee/2dd74cc0-8e7c-4712-a50f-04f4bf3623ab_LinkedIn-icon.svg.png?io=true&size=thumbnail-stack-v1_0",
