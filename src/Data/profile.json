@@ -49,6 +49,13 @@
     "targetLink": "http://www.youtube.com/@SriKrsnaBhajananvita"
   },
   {
+    "name": "SKB Shop",
+    "network": "shop",
+    "image": "https://i.ibb.co/WpW9sTm/Untitled-design-2.png",
+    "alt": "Shop Logo",
+    "targetLink": "https://abhishek-xpa-shop.fourthwall.com/en-inr/collections/all"
+  },
+  {
     "name": "Instagram",
     "network": "instagram",
     "image": "https://ugc.production.linktr.ee/f8c44daa-b5c9-4653-9493-eb934e5f4db3_images--1-.jpeg?io=true&size=thumbnail-stack-v1_0",
