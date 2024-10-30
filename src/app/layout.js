@@ -7,10 +7,14 @@ export const metadata = {
   title: "Abhishek Savaliya",
   description: "Simply connect with Abhishek Savaliya",
   profiles: data.reduce((acc, item) => {
-    acc[item.network] = item.targetLink;
+    acc[item.network] = {
+      targetLink: item.targetLink,
+      description: item.description
+    };
     return acc;
   }, {})
 };
+
 
 export default function RootLayout({ children }) {
 

@@ -4,83 +4,95 @@
     "network": "profile",
     "image": "https://ugc.production.linktr.ee/5dde9ed8-128b-4b41-a0f9-8466ed7517ba_Profile.jpeg?io=true&size=thumbnail-stack-v1_0",
     "alt": "Profile Logo",
-    "targetLink": "https://www.abhishekprofile.online"
+    "targetLink": "https://www.abhishekprofile.online",
+    "description": "Discover the professional profile of Abhishek Ghanshyambhai Savaliya. Explore his skills, projects, and experience in computer engineering, MERN stack development, and tech-related ventures."
   },
   {
     "name": "Email",
     "network": "email",
     "image": "https://ugc.production.linktr.ee/01653fe5-5844-4add-9634-99a853879988_018416a708cc44b0a2a89bfc92e2dbad-t.jpeg?io=true&size=thumbnail-stack-v1_0",
     "alt": "Email Logo",
-    "targetLink": "mailto:abhishekgetintouch@outlook.com"
+    "targetLink": "mailto:abhishekgetintouch@outlook.com",
+    "description": "Get in touch with Abhishek Ghanshyambhai Savaliya via email for inquiries, collaboration, or to learn more about his work in software development and technology."
   },
   {
     "name": "YouTube",
     "network": "youtube",
     "image": "https://ugc.production.linktr.ee/e254c96f-f09a-4a58-a34d-1a523c4edddb_1384060.png?io=true&size=thumbnail-stack-v1_0",
     "alt": "YouTube Logo",
-    "targetLink": "http://www.youtube.com/@SriKrsnaBhajananvita"
+    "targetLink": "http://www.youtube.com/@SriKrsnaBhajananvita",
+    "description": "Visit Abhishek's YouTube channel, Sri Krsna Bhajananvita, for insightful videos and content related to personal growth, spirituality, and more."
   },
   {
     "name": "Instagram",
     "network": "instagram",
     "image": "https://ugc.production.linktr.ee/f8c44daa-b5c9-4653-9493-eb934e5f4db3_images--1-.jpeg?io=true&size=thumbnail-stack-v1_0",
     "alt": "Instagram Logo",
-    "targetLink": "https://www.instagram.com/skbexplores"
+    "targetLink": "https://www.instagram.com/skbexplores",
+    "description": "Follow Abhishek on Instagram at SKB Explores for his latest updates, visual content, and to explore his journey through various experiences and projects."
   },
   {
     "name": "SKB Merchandise",
     "network": "shop",
     "image": "https://i.ibb.co/w40Gk0g/Untitled-design-3.png",
     "alt": "Shop Logo",
-    "targetLink": "https://abhishek-xpa-shop.fourthwall.com/en-inr/collections/all"
+    "targetLink": "https://abhishek-xpa-shop.fourthwall.com/en-inr/collections/all",
+    "description": "Explore SKB Merchandise by Abhishek for unique products and items. Discover a collection of branded merchandise available for fans and supporters."
   },
   {
     "name": "Paypal",
     "network": "paypal",
     "image": "https://i.ibb.co/JRJRbYx/paypal-3384015-1920.png",
-    "alt": "Twitch Logo",
-    "targetLink": "https://www.paypal.com/paypalme/AbhishekGSavaliya"
+    "alt": "Paypal Logo",
+    "targetLink": "https://www.paypal.com/paypalme/AbhishekGSavaliya",
+    "description": "Support Abhishek Ghanshyambhai Savaliya through Paypal. Donate or make payments easily to help fund his projects and initiatives."
   },
   {
     "name": "LinkedIn",
     "network": "linkedin",
     "image": "https://ugc.production.linktr.ee/2dd74cc0-8e7c-4712-a50f-04f4bf3623ab_LinkedIn-icon.svg.png?io=true&size=thumbnail-stack-v1_0",
     "alt": "LinkedIn Logo",
-    "targetLink": "https://www.linkedin.com/in/abhisheksavaliya"
+    "targetLink": "https://www.linkedin.com/in/abhisheksavaliya",
+    "description": "Connect with Abhishek Ghanshyambhai Savaliya on LinkedIn to view his professional achievements, endorsements, and network with industry leaders in technology."
   },
   {
     "name": "GitHub",
     "network": "github",
     "image": "https://ugc.production.linktr.ee/a7a9f8bf-2791-42fd-8871-7fc2d548cee1_25231.png?io=true&size=thumbnail-stack-v1_0",
     "alt": "GitHub Logo",
-    "targetLink": "https://github.com/abhishek1savaliya"
+    "targetLink": "https://github.com/abhishek1savaliya",
+    "description": "Explore Abhishek's open-source projects and contributions on GitHub. View his repositories and collaborative works in MERN stack and other technologies."
   },
   {
     "name": "X (Twitter)",
     "network": "x",
     "image": "https://ugc.production.linktr.ee/137e17e8-ff3d-473b-8f09-1e9243cca042_X-icon-2.png?io=true&size=thumbnail-stack-v1_0",
     "alt": "Twitter Logo",
-    "targetLink": "https://twitter.com/abhisheksvaliya"
+    "targetLink": "https://twitter.com/abhisheksvaliya",
+    "description": "Follow Abhishek Ghanshyambhai Savaliya on Twitter for his latest thoughts, tech updates, and insights into his professional and personal interests."
   },
   {
     "name": "Telegram",
     "network": "telegram",
     "image": "https://ugc.production.linktr.ee/f8c44daa-b5c9-4653-9493-eb934e5f4db3_images--1-.jpeg?io=true&size=thumbnail-stack-v1_0",
-    "alt": "Instagram Logo",
-    "targetLink": "https://t.me/SriKrsnaBhajananvita"
+    "alt": "Telegram Logo",
+    "targetLink": "https://t.me/SriKrsnaBhajananvita",
+    "description": "Join Abhishek on Telegram for direct updates, insights, and community engagement on his journey and projects."
   },
   {
     "name": "Discord",
     "network": "discord",
     "image": "https://ugc.production.linktr.ee/f8c44daa-b5c9-4653-9493-eb934e5f4db3_images--1-.jpeg?io=true&size=thumbnail-stack-v1_0",
     "alt": "Discord Logo",
-    "targetLink": "https://discord.gg/BQ3eDUAT"
+    "targetLink": "https://discord.gg/BQ3eDUAT",
+    "description": "Join Abhishek's Discord community for conversations, live updates, and collaboration with others who share similar interests in tech and development."
   },
   {
     "name": "Twitch",
     "network": "twitch",
     "image": "https://ugc.production.linktr.ee/f8c44daa-b5c9-4653-9493-eb934e5f4db3_images--1-.jpeg?io=true&size=thumbnail-stack-v1_0",
     "alt": "Twitch Logo",
-    "targetLink": "https://www.twitch.tv/srikrsnabhajananvita"
+    "targetLink": "https://www.twitch.tv/srikrsnabhajananvita",
+    "description": "Watch Abhishek's live streams on Twitch, where he shares valuable content, experiences, and interacts with his audience in real-time."
   }
 ]
