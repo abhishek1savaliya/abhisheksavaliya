@@ -11,6 +11,7 @@ import profileData from '../Data/profile.json'
 import Head from "next/head";
 import { SocialIcon } from "react-social-icons";
 import Visitors from "./component/Visitors/page";
+import axios from "axios";
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
@@ -54,6 +55,19 @@ export default function Home() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const count = async (item) => {
+
+    try {
+      const response = await axios.post('/api/social', {
+        network: item.network
+      });
+
+      console.log('Response:', response.data);
+    } catch (error) {
+      console.error('Error:', error.response ? error.response.data : error.message);
+    }
+  };
 
   return (
     <>
@@ -113,10 +127,14 @@ export default function Home() {
           <div>
             <ul className="space-y-2">
               {profileData.map((item, index) => (
+
                 <div
                   key={index}
                   style={{ padding: "1px" }}
-                  onClick={() => window.open(item.targetLink, "_blank")}
+                  onClick={() => {
+                    count(item);
+                    window.open(item.targetLink, "_blank");
+                  }}
                 >
                   <li className={`p-4 rounded-lg shadow-md transition-transform transform hover:scale-105 flex items-center justify-between cursor-pointer relative ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-100 hover:bg-gray-200'}`}>
                     <div className="flex items-center flex-grow">
