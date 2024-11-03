@@ -13,7 +13,7 @@ export async function POST(request) {
 
         await connectDb();
 
-        const totalVisit = await visitor.findOneAndUpdate(
+        await visitor.findOneAndUpdate(
             { createdAt: { $gte: startOfSpecificDate.toDate(), $lte: endOfSpecificDate.toDate() } },
             { $inc: { visitorCounts: 1 } },
             { new: true, upsert: true, setDefaultsOnInsert: true }
