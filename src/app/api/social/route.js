@@ -62,7 +62,22 @@ export async function GET(request) {
                     item.network[profile] = 0;
                 }
             });
+
+            // Sort the networks by count in descending order
+            item.network = Object.entries(item.network)
+                .sort((a, b) => b[1] - a[1]) // Sort by count, b[1] > a[1] for descending
+                .reduce((acc, [key, value]) => {
+                    acc[key] = value;
+                    return acc;
+                }, {});
+
             return item;
+        });
+
+        response.sort((a, b) => {
+            const dateA = moment(a.date, 'DD-MM-YYYY dddd').toDate();
+            const dateB = moment(b.date, 'DD-MM-YYYY dddd').toDate();
+            return dateB - dateA; 
         });
 
         return NextResponse.json({ success: true, data: response });

@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import moment from 'moment-timezone';
 
 const socialSchema = new mongoose.Schema(
     {
@@ -12,7 +13,7 @@ const socialSchema = new mongoose.Schema(
         },
         date: {
             type: Date,
-            default: Date.now,
+            default: () => moment().tz('Asia/Kolkata').toDate(), 
         },
     },
     {
@@ -28,4 +29,4 @@ const socialSchema = new mongoose.Schema(
 
 mongoose.models = {};
 
-export default mongoose.model("Social", socialSchema);
+export default mongoose.model('Social', socialSchema);
