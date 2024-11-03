@@ -8,14 +8,6 @@
     "description": "Discover the professional profile of Abhishek Ghanshyambhai Savaliya. Explore his skills, projects, and experience in computer engineering, MERN stack development, and tech-related ventures."
   },
   {
-    "name": "Email",
-    "network": "email",
-    "image": "https://ugc.production.linktr.ee/01653fe5-5844-4add-9634-99a853879988_018416a708cc44b0a2a89bfc92e2dbad-t.jpeg?io=true&size=thumbnail-stack-v1_0",
-    "alt": "Email Logo",
-    "targetLink": "mailto:abhishekgetintouch@outlook.com",
-    "description": "Get in touch with Abhishek Ghanshyambhai Savaliya via email for inquiries, collaboration, or to learn more about his work in software development and technology."
-  },
-  {
     "name": "YouTube",
     "network": "youtube",
     "image": "https://ugc.production.linktr.ee/e254c96f-f09a-4a58-a34d-1a523c4edddb_1384060.png?io=true&size=thumbnail-stack-v1_0",
@@ -32,12 +24,28 @@
     "description": "Follow Abhishek on Instagram at SKB Explores for his latest updates, visual content, and to explore his journey through various experiences and projects."
   },
   {
+    "name": "Facebook",
+    "network": "facebook",
+    "image": "https://ugc.production.linktr.ee/f8c44daa-b5c9-4653-9493-eb934e5f4db3_images--1-.jpeg?io=true&size=thumbnail-stack-v1_0",
+    "alt": "Face Logo",
+    "targetLink": "https://www.facebook.com/share/Qqjxp2KRq3gq5wEx",
+    "description": "Follow Abhishek on facebook at Abhishek Savaliya for his latest updates, visual content, and to explore his journey through various experiences and projects."
+  },
+  {
     "name": "SKB Merchandise",
     "network": "shop",
     "image": "https://i.ibb.co/w40Gk0g/Untitled-design-3.png",
     "alt": "Shop Logo",
     "targetLink": "https://abhishek-xpa-shop.fourthwall.com/en-inr/collections/all",
     "description": "Explore SKB Merchandise by Abhishek for unique products and items. Discover a collection of branded merchandise available for fans and supporters."
+  },
+  {
+    "name": "Email",
+    "network": "email",
+    "image": "https://ugc.production.linktr.ee/01653fe5-5844-4add-9634-99a853879988_018416a708cc44b0a2a89bfc92e2dbad-t.jpeg?io=true&size=thumbnail-stack-v1_0",
+    "alt": "Email Logo",
+    "targetLink": "mailto:abhishekgetintouch@outlook.com",
+    "description": "Get in touch with Abhishek Ghanshyambhai Savaliya via email for inquiries, collaboration, or to learn more about his work in software development and technology."
   },
   {
     "name": "Paypal",
