@@ -57,13 +57,10 @@ export default function Home() {
   }, []);
 
   const count = async (item) => {
-
     try {
-      const response = await axios.post('/api/social', {
+      await axios.post('/api/social', {
         network: item.network
       });
-
-      console.log('Response:', response.data);
     } catch (error) {
       console.error('Error:', error.response ? error.response.data : error.message);
     }

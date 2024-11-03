@@ -2,6 +2,8 @@ import { connectDb } from "@/helper/db";
 import social from "@/model/social";
 import moment from "moment-timezone";
 import { NextResponse } from "next/server";
+import allSocialProfile from '../../../Data/profile.json'
+moment.tz('Asia/Kolkata').format('ha z')
 
 export async function POST(request) {
     try {
@@ -28,5 +30,44 @@ export async function POST(request) {
     } catch (err) {
         console.error(err);
         return NextResponse.json({ message: "Failed to update visit count" });
+    }
+}
+
+export async function GET(request) {
+    try {
+        await connectDb();
+
+        const networkData = await social.find();
+
+        const socialProfileNames = allSocialProfile.map(profile => profile.network);
+
+        const groupedData = networkData.reduce((acc, entry) => {
+            const formattedDate = moment(entry.date).tz('Asia/Kolkata').format('DD-MM-YYYY dddd');
+            const networkName = entry.network;
+
+            if (!acc[formattedDate]) {
+                acc[formattedDate] = { date: formattedDate, network: {} };
+            }
+
+            acc[formattedDate].network[networkName] = entry.count;
+
+            return acc;
+        }, {});
+
+        // Convert grouped data object to array format
+        const response = Object.values(groupedData).map(item => {
+            // Initialize counts for all social profiles to 0
+            socialProfileNames.forEach(profile => {
+                if (!item.network[profile]) {
+                    item.network[profile] = 0;
+                }
+            });
+            return item;
+        });
+
+        return NextResponse.json({ success: true, data: response });
+    } catch (err) {
+        console.error(err);
+        return NextResponse.json({ message: "Failed to fetch network data" });
     }
 }

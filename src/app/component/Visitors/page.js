@@ -11,7 +11,7 @@ const Visitors = ({ mode }) => {
         const fetchVisitorCount = async () => {
             try {
                 const response = await axios.post('/api/visitors')
-                setVisitorCount(response.data.totalVisit.visitorCounts)
+                setVisitorCount(response.data.sumVisitorCounts)
             } catch (error) {
                 console.error('Error fetching visitor count:', error)
             } finally {

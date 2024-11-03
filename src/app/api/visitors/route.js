@@ -19,7 +19,9 @@ export async function POST(request) {
             { new: true, upsert: true, setDefaultsOnInsert: true }
         );
 
-        return NextResponse.json({ totalVisit });
+        const sumVisitorCounts = (await visitor.find()).reduce((sum, visitor) => sum + visitor.visitorCounts, 0);
+
+        return NextResponse.json({ sumVisitorCounts });
 
     } catch (err) {
         console.error(err);
