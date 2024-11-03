@@ -10,6 +10,7 @@ import Qrcode from './component/Qr/page'
 import profileData from '../Data/profile.json'
 import Head from "next/head";
 import { SocialIcon } from "react-social-icons";
+import Visitors from "./component/Visitors/page";
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
@@ -17,7 +18,7 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showLoader, setShowLoader] = useState(true);
 
-  const imageShow = ['profile', 'paypal','shop']
+  const imageShow = ['profile', 'paypal', 'shop']
 
   // Function to toggle popup
   const togglePopup = () => {
@@ -64,11 +65,22 @@ export default function Home() {
       <div className={`flex justify-center items-center min-h-screen ${isDarkMode ? 'dark-mode bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}>
         <div className={`w-full max-w-md p-8 m-3 ${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-md`}>
           <div className="flex justify-between mb-4">
+
+
+
+            <div>
+              <Visitors mode={isDarkMode ? 'dark' : 'light'} />
+            </div>
+
+
+
             <div></div>
             <button role="button" onClick={toggleDarkMode}>
               {isDarkMode ? <GoSun /> : <IoMoonOutline />}
             </button>
           </div>
+
+
 
           <div className="flex justify-center mb-4">
             <div className="w-36 h-36 bg-gray-300 rounded-full border-4 border-gray-100 overflow-hidden flex justify-center items-center">
