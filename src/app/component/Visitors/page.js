@@ -5,12 +5,12 @@ import { ClipLoader } from "react-spinners";
 
 const Visitors = ({ mode }) => {
     const [visitorCount, setVisitorCount] = useState(0)
-    const [loading, setLoading] = useState(true) // Add loading state
+    const [loading, setLoading] = useState(true) 
 
     useEffect(() => {
         const fetchVisitorCount = async () => {
             try {
-                const response = await axios.get('/api/visitors')
+                const response = await axios.post('/api/visitors')
                 setVisitorCount(response.data.totalVisit.visitorCounts)
             } catch (error) {
                 console.error('Error fetching visitor count:', error)

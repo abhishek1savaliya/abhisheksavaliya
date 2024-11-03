@@ -3,7 +3,7 @@ import visitor from "@/model/visitor";
 import moment from "moment-timezone";
 import { NextResponse } from "next/server";
 
-export async function GET(request) {
+export async function POST(request) {
     try {
 
         const today = moment().tz('Asia/Kolkata');
