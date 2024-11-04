@@ -9,7 +9,7 @@ const Admin = () => {
     const [socialData, setSocialData] = useState([]);
     const [selectedDate, setSelectedDate] = useState('');
     const [networks, setNetworks] = useState({});
-    const imageShow = ['profile', 'paypal', 'shop'];
+    const imageShow = ['profile', 'paypal', 'shop','buymeacoffee'];
 
     useEffect(() => {
         const fetchSocialData = async () => {

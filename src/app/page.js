@@ -19,7 +19,7 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showLoader, setShowLoader] = useState(true);
 
-  const imageShow = ['profile', 'paypal', 'shop']
+  const imageShow = ['profile', 'paypal', 'shop', 'buymeacoffee']
 
   // Function to toggle popup
   const togglePopup = () => {

@@ -13,7 +13,7 @@ import { SocialIcon } from 'react-social-icons';
 
 const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
-        const imageShow = ['profile', 'paypal', 'shop'];
+        const imageShow = ['profile', 'paypal', 'shop','buymeacoffee'];
         const { count, network, image } = payload[0].payload;
 
         const showImage = imageShow.includes(network) ? image : null;
