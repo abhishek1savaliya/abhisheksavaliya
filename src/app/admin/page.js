@@ -54,9 +54,9 @@ const Admin = () => {
                 <span className='text-center text-3xl font-bold '>Analytics</span>
             </div>
 
-            <div className='flex justify-center'>
+            {/* <div className='flex justify-center'>
                 <span className='text-center font-bold '>Total Visitors: <Visitors mode={'light'} /> </span>
-            </div>
+            </div> */}
 
             <div className="mb-4">
                 <label htmlFor="date-select" className="block mb-2">Select Date: </label>
