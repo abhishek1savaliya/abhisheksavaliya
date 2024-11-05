@@ -9,9 +9,9 @@ import Popup from './component/popup/page'
 import Qrcode from './component/Qr/page'
 import profileData from '../Data/profile.json'
 import Head from "next/head";
-import { SocialIcon } from "react-social-icons";
 import Visitors from "./component/Visitors/page";
 import axios from "axios";
+import NetworkIcon from "./component/NetworkIcon/page";
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
@@ -19,20 +19,15 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showLoader, setShowLoader] = useState(true);
 
-  const imageShow = ['profile', 'paypal', 'shop', 'buymeacoffee']
-
-  // Function to toggle popup
   const togglePopup = () => {
     setShowPopup(!showPopup);
   };
 
-  // Function to toggle QR
   const toggleQr = () => {
     console.log("Toggle QR called");
     setQr(!qr);
   };
 
-  // Toggle Dark Mode and update localStorage
   const toggleDarkMode = () => {
     const newMode = !isDarkMode;
     setIsDarkMode(newMode);
@@ -134,18 +129,10 @@ export default function Home() {
                     <div className="flex items-center flex-grow">
 
                       <div className='mr-2 h-13'>
-
-                        {imageShow.includes(item.network) ? (
-                          <img
-                            src={item.image}
-                            alt={item.alt}
-                            style={{ height: 50, width: 50, borderRadius: '50%' }}
-                          />
-
-                        ) : (
-                          <SocialIcon network={item.network} style={{ height: 50, width: 50 }} />
-                        )}
-
+                        <NetworkIcon
+                          network={item.network}
+                          alt={item.alt}
+                        />
                       </div>
 
 

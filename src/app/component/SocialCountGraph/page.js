@@ -9,27 +9,20 @@ import {
     CartesianGrid,
     Legend,
 } from 'recharts';
-import { SocialIcon } from 'react-social-icons';
+
+import NetworkIcon from '../NetworkIcon/page';
 
 const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
-        const imageShow = ['profile', 'paypal', 'shop','buymeacoffee'];
-        const { count, network, image } = payload[0].payload;
-
-        const showImage = imageShow.includes(network) ? image : null;
+        const { count, network } = payload[0].payload;
 
         return (
             <div className="bg-gray-800 text-white p-2 rounded">
                 <div className="flex items-center">
-                    {showImage ? (
-                        <img
-                            src={showImage}
-                            alt={network}
-                            className="h-12 w-12 rounded-full"
-                        />
-                    ) : (
-                        <SocialIcon network={network} className="h-12 w-12" />
-                    )}
+                    <NetworkIcon
+                        network={network}
+                        alt={network}
+                    />
                     <span className="ml-2">{network}</span>
                 </div>
                 <span>Count: {count}</span>
