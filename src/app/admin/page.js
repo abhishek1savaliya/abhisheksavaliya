@@ -5,6 +5,7 @@ import profileData from '../../Data/profile.json';
 import { SocialIcon } from 'react-social-icons';
 import SocialCountGraph from '../component/SocialCountGraph/page';
 import NetworkIcon from '../component/NetworkIcon/page';
+import Visitors from '../component/Visitors/page';
 
 const Admin = () => {
     const [socialData, setSocialData] = useState([]);
@@ -48,7 +49,15 @@ const Admin = () => {
     }));
 
     return (
-        <div className="min-h-screen bg-gray-900 text-white p-6">
+        <div className="min-h-screen bg-gray-900 text-white font-mono p-6">
+            <div className='flex justify-center'>
+                <span className='text-center text-3xl font-bold '>Analytics</span>
+            </div>
+
+            <div className='flex justify-center'>
+                <span className='text-center font-bold '>Total Visitors: <Visitors mode={'light'} /> </span>
+            </div>
+
             <div className="mb-4">
                 <label htmlFor="date-select" className="block mb-2">Select Date: </label>
                 <select
