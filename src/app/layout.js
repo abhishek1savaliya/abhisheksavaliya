@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import data from '../Data/profile'
-import { VisitorsProvider } from "./context/VisitorsContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -23,8 +22,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={inter.className}>
-        <VisitorsProvider>{children}
-        </VisitorsProvider>
+      {children}
+
       </body>
     </html>
   );
