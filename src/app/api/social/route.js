@@ -33,21 +33,23 @@ export async function POST(request) {
     }
 }
 
+
 export async function GET(request) {
     try {
         await connectDb();
 
         const networkData = await social.find();
-        if (networkData.length === 0) return NextResponse.json({ success: true, data: [] });
 
+        // Initialize the first date to 01-11-2024 or the earliest date in networkData
+        const firstDate = networkData.length > 0
+            ? moment.min(moment('01-11-2024', 'DD-MM-YYYY'), moment(networkData[0].date).tz('Asia/Kolkata'))
+            : moment('01-11-2024', 'DD-MM-YYYY');
+
+        const currentDate = moment().tz('Asia/Kolkata');
+        const dateMap = {};
         const socialProfileNames = allSocialProfile.map(profile => profile.network);
 
-        // Get the range of dates from the first available date up to the current date
-        const firstDate = moment(networkData[0].date).tz('Asia/Kolkata');
-        const currentDate = moment().tz('Asia/Kolkata');
-
-        // Create a map with all dates up to current date and zero counts
-        const dateMap = {};
+        // Generate date map with default values for each social profile count
         for (let date = firstDate.clone(); date.isSameOrBefore(currentDate); date.add(1, 'day')) {
             const formattedDate = date.format('DD-MM-YYYY dddd');
             dateMap[formattedDate] = { date: formattedDate, network: {} };
@@ -56,19 +58,19 @@ export async function GET(request) {
             });
         }
 
-        // Populate dateMap with actual data from networkData
+        // Populate date map with counts from networkData
         networkData.forEach(entry => {
             const formattedDate = moment(entry.date).tz('Asia/Kolkata').format('DD-MM-YYYY dddd');
             const networkName = entry.network;
             dateMap[formattedDate].network[networkName] = entry.count;
         });
 
-        // Convert dateMap to an array and sort it by date in descending order
+        // Convert dateMap to an array and sort by date descending
         const response = Object.values(dateMap)
             .map(item => {
-                // Sort the networks by count in descending order
+                // Sort network counts within each date in descending order
                 item.network = Object.entries(item.network)
-                    .sort((a, b) => b[1] - a[1]) // Sort by count, b[1] > a[1] for descending
+                    .sort((a, b) => b[1] - a[1])
                     .reduce((acc, [key, value]) => {
                         acc[key] = value;
                         return acc;
