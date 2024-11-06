@@ -12,7 +12,6 @@ import Head from "next/head";
 import Visitors from "./component/Visitors/page";
 import axios from "axios";
 import NetworkIcon from "./component/NetworkIcon/page";
-import { VisitorsProvider } from "./context/VisitorsContext";
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
@@ -54,7 +53,7 @@ export default function Home() {
 
   const count = async (item) => {
     try {
-      console.log(item.network)
+     
       const response = await axios.post('/api/social', {
         network: item.network
       });
@@ -66,7 +65,7 @@ export default function Home() {
   };
 
   return (
-    <VisitorsProvider>
+
       <>
 
         <Head>
@@ -168,6 +167,6 @@ export default function Home() {
           </div>
         )}
       </>
-    </VisitorsProvider>
+
   );
 }

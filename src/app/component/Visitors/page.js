@@ -1,11 +1,26 @@
-// Visitors.js
 'use client'
-import { useVisitors } from '@/app/context/VisitorsContext';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import { ClipLoader } from "react-spinners";
 
 const Visitors = ({ mode }) => {
-    const { visitorCount, loading } = useVisitors()
+    const [visitorCount, setVisitorCount] = useState(0)
+    const [loading, setLoading] = useState(true) 
+
+    useEffect(() => {
+        const fetchVisitorCount = async () => {
+            try {
+                const response = await axios.post('/api/visitors')
+                setVisitorCount(response.data.sumVisitorCounts)
+            } catch (error) {
+                console.error('Error fetching visitor count:', error)
+            } finally {
+                setLoading(false)
+            }
+        }
+
+        fetchVisitorCount()
+    }, [])
 
     return (
         <span>
@@ -15,6 +30,7 @@ const Visitors = ({ mode }) => {
                 visitorCount
             )}
         </span>
+
     )
 }
 
