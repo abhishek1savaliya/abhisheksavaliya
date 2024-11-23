@@ -45,14 +45,12 @@ export async function GET(request) {
             return NextResponse.json({ message: "Invalid request data: Missing day, month, or year" });
         }
 
-        // Define the target date using the day, month, and year provided
         const targetDate = moment.tz(`${day}-${month}-${year}`, 'DD-MM-YYYY', 'Asia/Kolkata');
 
         await connectDb();
 
         const networkData = await social.find();
 
-        // If there is no data in the database, return an empty structure with all counts set to 0
         if (networkData.length === 0) {
             // Get all available social profile names
             const socialProfileNames = allSocialProfile.map(profile => profile.network);
